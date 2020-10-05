@@ -31,7 +31,7 @@ namespace Catalog.API.Controllers
             return Ok(await _repository.GetProductsAsync());
         }
 
-        [HttpGet("{id:string:length(24)}", Name ="GetProduct")]
+        [HttpGet("{id:length(24)}", Name ="GetProduct")]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<Product>> GetProductById(string id)
@@ -67,7 +67,7 @@ namespace Catalog.API.Controllers
             return Ok(await _repository.Update(product));
         }
 
-        [HttpDelete("{id:string:length(24)}")]
+        [HttpDelete("{id:length(24)}")]
         public async Task<ActionResult<Product>> DeleteProduct(string id )
         {
             return Ok(await _repository.Delete(id));
