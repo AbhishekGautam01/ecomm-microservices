@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Basket.API.Data;
 using Basket.API.Data.Interface;
 using Basket.API.Repositories;
@@ -73,7 +74,9 @@ namespace Basket.API
 
             services.AddSingleton<EventBusRabbitMQProducer>();
 
-            #endregion            
+            #endregion
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

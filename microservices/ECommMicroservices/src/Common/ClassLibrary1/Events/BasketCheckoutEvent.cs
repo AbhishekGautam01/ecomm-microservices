@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EventBusRabbitMQ.Events
 {
-    public class BasketCheckout
+    public class BasketCheckoutEvent
     {
         public Guid RequestId { get; set; }
         public string UserName { get; set; }
