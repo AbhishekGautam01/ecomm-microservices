@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ordering.Core.Entities.Base
 {
-    public abstract class Entity: EntityBase<TId>
+    public abstract class Entity: EntityBase<int>
     {
     }
 }
