@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Ordering.API.RabbitMQ;
 using Ordering.Application.Handler;
 using Ordering.Core.Repositories;
 using Ordering.Core.Repositories.Base;
